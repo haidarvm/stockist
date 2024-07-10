@@ -1,0 +1,42 @@
+.autoComplete_wrapper {
+    width: 100%;
+}
+
+.card-style .dropdown-toggle {
+    background: rgb(218, 35, 35);
+}
+
+.sidebar-nav-wrapper .navbar-logo {
+    margin: 0;
+}
+
+.input-group> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    padding: 10px;
+}
+
+.autoComplete_wrapper>input {
+    width: 100% !important;
+    padding: 10px 40px;
+    border-radius: 5px !important;
+    color: #000 !important;
+    border: .05rem solid rgba(132, 132, 132, 0.5) !important;
+}
+
+.autoComplete_wrapper>ul {
+    max-height: 400px;
+    z-index: 3000;
+}
+
+.header {
+    padding: 10px 0;
+}
+
+.min-width {
+    /* width: 100%; */
+}
+
+.input-style-1 input,
+.input-style-1 textarea {
+    color: #000000;
+    /* background: rgb(241, 241, 241); */
+}

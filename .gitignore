@@ -1,0 +1,4 @@
+config.ini
+comopser.lock
+/vendor
+/app/public/tmp/

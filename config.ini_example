@@ -1,0 +1,7 @@
+db_driver=mysql
+db_host=localhost
+db_name=invbio
+db_user=root
+db_pass=bismillah
+db_prefix=invbio_
+PR=haidar123
