@@ -1,3 +1,6 @@
+# stockist
+Stock barang keluar, masuk dan harga
+
 - bug if stock less than actual stock than alert 
 - Add current stock on choose auto complete item (add current stock in query)
 - Style on autocomplate should be red 
@@ -81,3 +84,4 @@ https://codepen.io/tarekraafat/embed/rQopdW?height=265&theme-id=dark&default-tab
 # Multiple Auto select example
 https://jsfiddle.net/tarekraafat/6p5j4Lzh/2/
 https://github.com/TarekRaafat/autoComplete.js/issues/82
+
