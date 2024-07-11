@@ -113,7 +113,12 @@ require_once 'template/header.php';?>
                                                 </td>
                                                 <td class="min-width">
                                                     <p class="text-danger">
-                                                        <?=number_format($row->price * $row->quantity) ;?></span>
+                                                        <?php
+                                                        if($table == 'stock_in') { 
+                                                            echo number_format($row->price * $row->quantity) ;
+                                                        } else {
+                                                            echo number_format($row->selling_price * $row->quantity) ;
+                                                        }?></span>
                                                     </p>
                                                 </td>
                                                 <td class="min-width datetime">

@@ -60,110 +60,110 @@ Basic::setAutoRoute(); // Automatic '/class/method' routing
 |--------------------------------------------------------------------------
 */
 
-Basic::route('GET', '/', function()  { // Set homepage
+Basic::route('GET', '/', function()  {  // Set homepage
     // echo base_url_no();
     header('Location: ' . base_url() . 'home');
     // $page_title = 'Dashboard';
     // Basic::view('home', compact('page_title'));
 });
 
-Basic::route('GET', '/chart', function()  { // Set homepage
+Basic::route('GET', '/chart', function()  {
     $chart = new ChartAllController("stock");
     $chart->index();
 });
 
-Basic::route('GET', '/chart/stock', function()  { // Set homepage
+Basic::route('GET', '/chart/stock', function()  {
     $chart = new ChartAllController("stock");
     $chart->index();
 });
 
-Basic::route('GET', '/chart/stock_in', function()  { // Set homepage
+Basic::route('GET', '/chart/stock_in', function()  {
     $chart = new ChartAllController("stock_in");
     $chart->index();
 });
 
-Basic::route('GET', '/chart/stock_out', function()  { // Set homepage
+Basic::route('GET', '/chart/stock_out', function()  {
     $chart = new ChartAllController("stock_out");
     $chart->index();
 });
 
-Basic::route('GET', '/chart_all', function()  { // Set homepage
+Basic::route('GET', '/chart_all', function()  {
     $chart = new ChartAllController("stock");
     $chart->list_all();
 });
 
-Basic::route('GET', '/pdf', function()  { // Set homepage
+Basic::route('GET', '/pdf', function()  {
     $stock = new StockAllController("stock");
     $stock->pdf('stock');
 });
 
-Basic::route('GET', '/stock', function()  { // Set homepage
+Basic::route('GET', '/stock', function()  {
     $stock = new StockAllController("stock");
     $stock->index();
 });
 
-Basic::route('GET', '/stock_all', function()  { // Set homepage
+Basic::route('GET', '/stock_all', function()  {
     $stock = new StockAllController("stock");
     $stock->list_all();
 });
 
-Basic::route('GET', '/stock/new', function()  { // Set homepage
+Basic::route('GET', '/stock/new', function()  {
     $stock = new StockAllController("stock");
     $stock->new();
 });
 
-Basic::route('GET', '/stock/new_multi', function()  { // Set homepage
+Basic::route('GET', '/stock/new_multi', function()  {
     $stock = new StockAllController("stock");
     $stock->new_multi();
 });
 
-Basic::route('POST', '/stock/save', function()  { // Set homepage
+Basic::route('POST', '/stock/save', function()  {
     $stock = new StockAllController("stock");
     $stock->save();
 });
 
-Basic::route('GET', '/stock/delete/(:any)/(:num)/(:num)/(:num)', function()  { // Set homepage
+Basic::route('GET', '/stock/delete/(:any)/(:num)/(:num)/(:num)', function()  {
     $stock = new StockAllController("stock");
     $stock->delete(uri(3), uri(4), uri(5), uri(6));
 });
 
 
-Basic::route('POST', '/stock/save_multi', function()  { // Set homepage
+Basic::route('POST', '/stock/save_multi', function()  {
     $stock = new StockAllController("stock");
     $stock->save_multi();
 });
 
-Basic::route('GET', '/stock_in', function()  { // Set homepage
+Basic::route('GET', '/stock_in', function()  {
     $stock = new StockAllController("stock_in");
     $stock->index();
 });
 
-Basic::route('GET', '/stock_out', function()  { // Set homepage
+Basic::route('GET', '/stock_out', function()  {
     $stock = new StockAllController("stock_out");
     $stock->index();
 });
 
-Basic::route('GET', '/stock/edit/(:any)', function()  { // Set homepage
+Basic::route('GET', '/stock/edit/(:any)', function()  {
     $stock = new StockAllController("stock");
     $stock->edit_item(uri(3));
 });
 
-Basic::route('GET', '/stock_in/edit/(:num)', function()  { // Set homepage
+Basic::route('GET', '/stock_in/edit/(:num)', function()  {
     $stock = new StockAllController("stock_in");
     $stock->edit();
 });
 
-Basic::route('GET', '/stock_out/edit/(:num)', function()  { // Set homepage
+Basic::route('GET', '/stock_out/edit/(:num)', function()  {
     $stock = new StockAllController("stock_out");
     $stock->edit();
 });
 
-Basic::route('POST', '/stock/update/(:any)', function()  { // Set homepage
+Basic::route('POST', '/stock/update/(:any)', function()  {
     $stock = new StockAllController(uri(3));
     $stock->update();
 });
 
-Basic::route('GET', '/logout', function()  { // Set homepage
+Basic::route('GET', '/logout', function()  {
     $auth = new AuthController;
     $auth->logout();
 });
