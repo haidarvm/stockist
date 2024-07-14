@@ -16,10 +16,10 @@ require_once 'template/header.php';
                         <!-- <img src="<?=base_url();?>assets/img/powermonitor.jpg" alt="" width="120" /> -->
                     </div>
                     <div class="d-flex align-items-center mb-30">
-                        <div class="profile-image">
+                        <!-- <div class="profile-image">
                             <img src="<?=base_url();?>assets/img/powermonitor.jpg" alt="" width="120" />
 
-                        </div>
+                        </div> -->
                         <div class="profile-meta pl-30">
                             <h5 class="text-bold text-dark mb-10">Product</h5>
                             <p class=" text-black"><?=$stock->item_name;?></p>

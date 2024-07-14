@@ -37,9 +37,9 @@ require_once 'template/header.php';?>
                                                 <th>
                                                     <h6>Nama Barang</h6>
                                                 </th>
-                                                <th>
+                                                <!-- <th>
                                                     <h6>Jenis</h6>
-                                                </th>
+                                                </th> -->
                                                 <?php
                                                 if (!empty($all)) {
                                                     ?>
@@ -65,7 +65,7 @@ require_once 'template/header.php';?>
                                                 </th>
                                                 <?php
                                                 } 
-                                                if($session->get("user_data")["level"] == 1) {?>
+                                                if($session->get("user_data")["level"] == 1 && $table != 'stock') {?>
                                                 <th class="text-center">
                                                     <h6>Action</h6>
                                                 </th>
@@ -83,10 +83,10 @@ require_once 'template/header.php';?>
                                                 </td>
                                                 <td class="min-width">
                                                     <div class="lead">
-                                                        <div class="lead-image">
+                                                        <!-- <div class="lead-image">
                                                             <img src="<?=base_url();?>assets/img/powermonitor.jpg"
                                                                 alt="" />
-                                                        </div>
+                                                        </div> -->
                                                         <?php
                                                         $class = $row->quantity <= $minimal ? 'text-danger' : '';
                                                         ?>
@@ -95,9 +95,9 @@ require_once 'template/header.php';?>
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td class="min-width">
+                                                <!-- <td class="min-width">
                                                     <p><?=$row->item_code . ' ' . $row->category_name;?></p>
-                                                </td>
+                                                </td> -->
                                                 <?php
                                                 if (!empty($all)) {
                                                     ?>
@@ -135,7 +135,7 @@ require_once 'template/header.php';?>
                                                 </td>
                                                 <?php
                                                 }
-                                                if ($session->get('user_data')['level'] == 1) {?>
+                                                if ($session->get('user_data')['level'] == 1 && $table != "stock") {?>
                                                 <td class="text-center">
                                                     <div class="action text-center">
                                                         <span class="text-danger ">
@@ -154,10 +154,8 @@ require_once 'template/header.php';?>
                                                             // $edit = empty($item) && $table == "stock" ? "href='".base_url().$table."/edit/".$row->item_id."'"  : "href='".base_url().$table."/edit/".$row->stock_id."'";
                                                             // $edit = !empty($item) && $table == "stock" ? "href='".base_url()."stock_".$row->status."/edit/".$row->stock_id."'"  :  $edit;
                                                             ?>
-                                                            
                                                             <a class="text-success" <?=$edit;?>><i
                                                                     class="lni lni-pencil"></i></a> 
-                                                                    
                                                                 <?php if($table != 'stock') { ?> |
                                                             <a class="text-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus?')"  href="<?=base_url(). 'stock/delete/'. $table. '/'. $row->stock_id . '/'. $row->item_id .'/'. $row->quantity ?>"><i
                                                                     class="lni lni-trash-can"></a></i>

@@ -61,9 +61,9 @@ require_once 'template/header.php';
                         $form = new Bas_Form;
                         $form->open(base_url().'stock/save');
                         ?>
-                        <div class="d-flex align-items-center justify-content-center">
+                        <!-- <div class="d-flex align-items-center justify-content-center">
                             <img src="<?=base_url();?>assets/img/powermonitor.jpg" alt="" width="120" />
-                        </div>
+                        </div> -->
 		                <div class="input-style-1">
 			                <label class="control-label col-sm-2">Product :</label>
                             <input type="text" id="autoComplete" placeholder="Power meter" value="" size="100" />

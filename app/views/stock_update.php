@@ -35,11 +35,11 @@ require_once 'template/header.php';
                         $form->open(base_url() . 'stock/save');
                         ?>
 
-                    <div class="profile-info">
+                    <!-- <div class="profile-info">
                         <div class="profile-image">
                             <img src="<?=base_url();?>assets/img/powermonitor.jpg" alt="" width="120" />
                         </div>
-                    </div>
+                    </div> -->
                     <?php
                         $form->input_line('text', 'item_name', 'Item', '', '', '', '', '', 'autocomplete01');
                         ?>
