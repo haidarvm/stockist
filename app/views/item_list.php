@@ -32,10 +32,10 @@ require_once 'template/header.php';?>
                                                     <h6>item Name</h6>
                                                 </th>
                                                 <th>
-                                                    <h6>Price</h6>
+                                                    <h6>Hpp</h6>
                                                 </th>
                                                 <th>
-                                                    <h6>item Code</h6>
+                                                    <h6>Harga Jual</h6>
                                                 </th>
                                                 <th>
                                                     <h6>Category</h6>
@@ -66,8 +66,8 @@ require_once 'template/header.php';?>
                                                 <td >
                                                     <p><?=number_format($row->price);?></p>
                                                 </td>
-                                                <td class="min-width">
-                                                    <p><?=$row->item_code;?></p>
+                                                <td >
+                                                    <p><?=number_format($row->selling_price);?></p>
                                                 </td>
                                                 <td class="min-width">
                                                     <p><?=$row->category_name;?></p>
