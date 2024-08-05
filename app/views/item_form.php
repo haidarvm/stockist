@@ -16,7 +16,7 @@ require_once 'template/header.php';
                         $form = new Bas_Form;
                         $form->open(base_url().'item/save/'. $action);
                         $form->input_line("text",'item_name',"Item Name", '', !empty($item->item_name) ? $item->item_name : "",'',true );
-                        $form->input_line("text",'item_code',"Item Code", '', !empty($item->item_code) ? $item->item_code : "",'',true );
+                        $form->input_line("text",'item_code',"Item Code", '', !empty($item->item_code) ? $item->item_code : "",'',false );
                         $form->input_line("text",'price',"Price", '', !empty($item->price) ? $item->price : "",'',true );
                         $form->input_line("text",'selling_price',"Selling Price", '', !empty($item->selling_price) ? $item->selling_price : "",'',true );
                         $form->input_line("text",'unit',"Unit", '', !empty($item->unit) ? $item->unit : "",'',true );
