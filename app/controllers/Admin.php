@@ -7,7 +7,6 @@ class Admin {
 
     public function __construct() {
         $this->session = new Session();
-        $this->var = "arfa";
         // print_r($this->session);exit;
         if (!$this->session->get('user_data')) {
             header('Location: ' . base_url() . 'auth');

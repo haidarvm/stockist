@@ -112,6 +112,16 @@ Basic::route('GET', '/stock/new', function()  {
     $stock->new();
 });
 
+Basic::route('GET', '/stock/in', function()  {
+    $stock = new StockAllController("stock");
+    $stock->in();
+});
+
+Basic::route('GET', '/stock/out', function()  {
+    $stock = new StockAllController("stock");
+    $stock->out();
+});
+
 Basic::route('GET', '/stock/new_multi', function()  {
     $stock = new StockAllController("stock");
     $stock->new_multi();

@@ -10,6 +10,7 @@ class ApiController extends PublicController {
     protected $product;
     protected $request;
     protected $response;
+    protected $item;
 
     public function __construct() {
         parent::__construct();

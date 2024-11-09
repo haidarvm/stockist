@@ -7,7 +7,7 @@ class HomeController extends Admin {
 
     public function __construct() {
         parent::__construct();
-        $this->stockc = new StockAllController('stock');
+        $this->stock = new StockAllController('stock');
         $this->stock = new StockModel;
         $this->table = "stock";
         $this->stock->table = "stock";

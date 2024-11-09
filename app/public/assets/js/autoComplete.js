@@ -39,7 +39,7 @@
             highlight: true,
             dataAttribute: { tag: "value", value: "" },
             onSelection: feedback => {
-                document.querySelector(element).innerHTML = feedback.selection.food;
+                document.querySelector(element).innerHTML = feedback.selection.item_id;
                 document
                     .querySelector(element)
                     .setAttribute("placeholder", `${event.target.closest(".autoComplete_result").id}`);

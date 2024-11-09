@@ -24,13 +24,7 @@ class ConfigController extends Admin{
         view('config_form', $data);
     }
 
-    // public function add() {
-    //     $data['page_title'] = "Add config";
-    //     $data['action'] = "insert";
-    //     $data['category'] = $this->category->getAll();
-    //     view('config_form', $data);
-    // }
-
+  
     public function save() {
         $action = uri(3);
         $post = $this->request->request->all();

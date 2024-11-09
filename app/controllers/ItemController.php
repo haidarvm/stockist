@@ -3,6 +3,8 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ItemController extends Admin {
     protected $item;
+    protected $category;
+    protected $request;
 
     public function __construct() {
         parent::__construct();

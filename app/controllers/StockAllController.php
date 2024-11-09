@@ -42,6 +42,17 @@ class StockAllController extends Admin {
         view('stock_update', $data);
     }
 
+    public function in() {
+        $data['page_title'] = 'Stock IN';
+        view('stock_in', $data);
+    }
+
+    public function out() {
+        $data['page_title'] = 'Stock Out';
+        view('stock_out', $data);
+    }
+
+
     public function new_multi() {
         $data['page_title'] = 'Update Stock Multi';
         view('stock_multi', $data);
@@ -124,8 +135,8 @@ class StockAllController extends Admin {
         $this->stock->table = $post['table'];
         $this->stock->insertLatest($data);
         $this->stock->updateStock($data['item_id'], $post['table'], $data['quantity']);
-        $href = $post['table'] == 'stock_out' ? '?update=out' : '?update=in';
-        header('Location: ' . base_url() . 'stock/new' . $href);
+        $href = $post['table'] == 'stock_out' ? 'out' : 'in';
+        header('Location: ' . base_url() . 'stock/' . $href);
     }
 
     public function save_multi() {
